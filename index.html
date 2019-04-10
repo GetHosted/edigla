@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-deep-orange w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Company<br>Name</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="#LastMinute" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Last Minute</a>
+    <a href="#MonthlyDeals" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Monthly Deals</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-deep-orange w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-deep-orange w3-margin-right" onclick="w3_open()">☰</a>
+  <span>EDI GLA DEALS</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="Home">
+
+    <h1 class="w3-xxxlarge w3-text-deep-orange"><b>EDI GLA Deals <i class="fas fa-plane-departure"></i></b></h1>
+    <hr style="width:50px;border:5px solid deep-orange" class="w3-round">
+<p>Holiday deals departing from <b>Glasgow</b>, <b>Prestwick</b> & <b>Edinburgh</b>. Updated Daily.</p>
+  </div>
+
+
+  <!-- Daily Deal -->
+  <div class="w3-container" id="LastMinute" style="margin-top:75px">
+  <div  class="w3-row-padding">
+    <div class="w3-col  w3-margin-bottom">
+      <div class="w3-sand">
+        <h1 class="w3-xxlarge w3-text-deep-orange w3-margin-left">Mallorca
+          <i class="fas fa-star fa-xs"></i>
+          <i class="fas fa-star fa-xs"></i>
+          <i class="fas fa-star fa-xs"></i>
+        </h1>
+        <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="week-image/1.jpg" style="width:100%;" onclick="onClick(this)" alt="Concrete meets bricks">
+        <img src="week-image/2.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+      </div>
+
+      <div class="w3-half">
+        <img src="week-image/3.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+        <img src="week-image/4.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+      </div>
+    </div>
+    <div class="w3-container">
+      <h3>Details</h3>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <ul style="list-style: none;" class="w3-opacity">
+        <li><kbd><i class="fas fa-plane-departure"></i> GLA Return</kbd></li>
+        <li><kbd><i class="fas fa-bed"></i> 7 Nights - Self Catering</kbd>
+          <!--<ul>
+            <li>3 Star</li>
+            <li>Trip Advisor Rating: 4.6</li>
+          </ul>-->
+        </li>
+        <li><kbd><i class="fas fa-exchange-alt"></i>   Bus Transfers</kbd></li>
+      </ul>
+      <ul><kbd>Total: £183 pp</kbd></ul>
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-deep-orange"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid deep-orange" class="w3-round">
+    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" requideep-orange>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" requideep-orange>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" requideep-orange>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-deep-orange w3-margin-bottom">Send Message</button>
+    </form>
+  </div>
+
+<!--Staticman User Deals Page-->
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powedeep-orange by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
